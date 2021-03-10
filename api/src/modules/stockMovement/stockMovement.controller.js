@@ -12,6 +12,18 @@ class Controller {
     const data = await stockMovementDao.findAll(ids.split(","));
     res.json(data);
   }
+
+  async listProductsWithStock(req, res) {
+    const data = await stockMovementDao.listProductsWithStock();
+    res.json(data);
+  }
+
+  async listProductMovement(req, res) {
+    const { id: productId } = req.params;
+    const data = await stockMovementDao.listMovements(productId);
+
+    res.json(data);
+  }
 }
 
 module.exports = new Controller();

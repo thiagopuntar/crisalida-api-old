@@ -31,6 +31,7 @@ const dt = new Date();
 const dayOfWeek = dt.getDay();
 
 const today = date.formatDate(dt, "DD/MM/YYYY");
+console.log(today);
 const yesterday = date.formatDate(
   date.subtractFromDate(dt, { days: 1 }),
   "DD/MM/YYYY"

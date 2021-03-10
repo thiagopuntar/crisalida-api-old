@@ -153,25 +153,6 @@ const routes = [
         ]
       },
       {
-        path: "/suppliers",
-        component: () => import("pages/SupplierList.vue"),
-        name: "suppliers",
-        title: "Fornecedores",
-        icon: "business",
-        children: [
-          {
-            path: "new",
-            component: () => import("pages/SupplierForm.vue"),
-            name: "newSupplier"
-          },
-          {
-            path: ":id",
-            component: () => import("pages/SupplierForm.vue"),
-            name: "editSupplier"
-          }
-        ]
-      },
-      {
         path: "/production",
         component: () => import("pages/ProductionForm.vue"),
         name: "production",
@@ -184,6 +165,13 @@ const routes = [
         name: "orderPick",
         title: "Azulejo Pedidos",
         icon: "assignment"
+      },
+      {
+        path: "/stock",
+        component: () => import("pages/StockList.vue"),
+        name: "stock",
+        title: "Estoque",
+        icon: "inventory"
       }
     ]
   }

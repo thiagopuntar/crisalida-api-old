@@ -28,8 +28,8 @@ const limiter = rateLimit({
   max: 60,
 });
 
-app.use("/api/v1/cardapio", limiter, cardapioRoute);
 app.use("/api/v1/login", loginRoute);
+app.use("/api/v1/cardapio", limiter, cardapioRoute);
 app.use("/api/v1", authMiddleware, apiRoutes);
 app.use("/reports", authMiddleware, reportRoutes);
 app.use(appRoute);
