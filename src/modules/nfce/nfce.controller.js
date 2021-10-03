@@ -64,7 +64,7 @@ class Controller {
 
     const nfceBody = {
       cnpj_emitente: NF_CNPJ_EMITENTE,
-      data_emissao: moment().format("YYYY-MM-DD HH:mm:ss"),
+      data_emissao: moment().subtract(3, 'hours').format("YYYY-MM-DD HH:mm:ss"),
       modalidade_frete: "9",
       presenca_comprador: "1",
       natureza_operacao: "VENDA AO CONSUMIDOR",
