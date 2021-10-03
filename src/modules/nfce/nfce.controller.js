@@ -5,8 +5,8 @@ const fs = require("fs");
 const path = require("path");
 const AdmZip = require("adm-zip");
 
-const OrderDao = require("../../modules/order/order.dao");
-const CustomerDao = require("../../modules/customer/customer.dao");
+const OrderDao = require("../order/order.dao");
+const CustomerDao = require("../customer/customer.dao");
 const customerDao = new CustomerDao();
 const orderDao = new OrderDao(customerDao);
 
